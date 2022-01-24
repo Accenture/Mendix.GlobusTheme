@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Navigation - helpers
+// -----------------------------------------------------------------------------
+
+.region-sidebar {
+  .mx-navigationtree {
+    .navbar-inner > ul {
+      & > li:not(.mx-navigationtree-has-items) {
+        a.active {
+          position: relative;
+
+          &::before {
+            background-color: $link-color;
+            border-radius: 0 $border-radius-default $border-radius-default 0;
+            content: "";
+            height: 36px;
+            left: 0;
+            position: absolute;
+            width: 3px;
+          }
+        }
+      }
+    }
+  }
+}

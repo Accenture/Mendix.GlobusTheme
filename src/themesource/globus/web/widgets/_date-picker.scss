@@ -1,0 +1,71 @@
+// -----------------------------------------------------------------------------
+// Date Picker - widgets
+// -----------------------------------------------------------------------------
+
+.mx-calendar {
+  background-color: $global-brand-white;
+  border: 1px solid $form-input-border-color;
+  box-shadow: 0 2px 8px 0 rgba($global-brand-black, 0.08);
+  font-size: $font-size-default;
+  margin-top: $spacing-small / 4;
+  padding: $spacing-small;
+
+  .mx-calendar-month-next,
+  .mx-calendar-month-previous,
+  .mx-calendar-month-dropdown {
+    align-items: center;
+    display: flex;
+
+    .glyphicon {
+      background-repeat: repeat;
+      height: 14px;
+      width: 14px;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .mx-calendar-month-next {
+    .glyphicon {
+      background-image: url("../../../img/Globus$Images$Add.svg");
+    }
+  }
+
+  .mx-calendar-month-previous {
+    .glyphicon {
+      background-image: url("../../../img/Globus$Images$Minus.svg");
+    }
+  }
+
+  .mx-calendar-month-dropdown {
+    .glyphicon {
+      background-image: url("../../../img/Globus$Images$Caret.svg");
+    }
+  }
+
+  th {
+    font-weight: $font-weight-semibold;
+  }
+
+  td {
+    &:hover {
+      background-color: $global-brand-gray;
+    }
+
+    &:focus {
+      outline: 1px solid $global-brand-primary;
+    }
+  }
+}
+
+.mx-calendar-month-dropdown-options {
+  background-color: $global-brand-white;
+  border: 1px solid $form-input-border-color;
+  box-shadow: 0 2px 8px 0 rgba($global-brand-black, 0.08);
+
+  div {
+    padding: ($spacing-small / 4) 0;
+  }
+}

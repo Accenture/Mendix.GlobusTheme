@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// Pageheader
+// -----------------------------------------------------------------------------
+
+.pageheader {
+  .pageheader-title {
+    margin: 0;
+
+    & + .pageheader-subtitle {
+      margin: $spacing-small / 2 0 0;
+    }
+  }
+
+  .breadcrumb {
+    margin-top: $spacing-medium;
+  }
+}

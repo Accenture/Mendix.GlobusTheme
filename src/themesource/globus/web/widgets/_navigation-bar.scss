@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// Navigation - widgets
+// -----------------------------------------------------------------------------
+
+.mx-navbar {
+  ul.nav {
+    & > li.mx-navbar-item > a {
+      border-radius: 0;
+      font-weight: $font-weight-semibold;
+      min-height: $topbar-minimalheight;
+
+      .caret {
+        border: 0;
+        display: inline-block;
+        margin-left: ($spacing-small / 2);
+        height: 14px;
+        width: 14px;
+
+        &::after {
+          background: url("../../../img/Globus$Images$Caret.svg") no-repeat;
+          content: "";
+          display: inline-block;
+          height: 14px;
+          width: 14px;
+        }
+      }
+
+      img {
+        margin-right: ($spacing-small / 2);
+      }
+    }
+  }
+}

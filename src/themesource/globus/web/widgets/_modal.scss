@@ -1,0 +1,66 @@
+// -----------------------------------------------------------------------------
+// Modal - widgets
+// -----------------------------------------------------------------------------
+
+.modal-dialog {
+  .modal-content {
+    box-shadow: none;
+
+    .modal-header {
+      align-items: center;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding: $spacing-medium $spacing-large;
+
+      h4 {
+        color: $global-brand-primary;
+        font-size: $font-size-h4;
+      }
+
+      .close {
+        background: url("../../../img/Globus$Images$Close.svg") no-repeat;
+        font-size: 0;
+        height: 20px;
+        margin: 0;
+        width: 20px;
+      }
+    }
+
+    .modal-footer {
+      padding: $spacing-medium $spacing-large;
+
+      .btn + .btn {
+        margin-left: $spacing-small / 2;
+      }
+    }
+  }
+}
+
+.mx-window {
+  &.mx-window-view .mx-window-body {
+    padding: 0;
+
+    > .mx-dataview > .mx-dataview-content,
+    > .mx-placeholder > .mx-dataview > .mx-dataview-content {
+      padding: $spacing-medium $spacing-large;
+    }
+
+    > .mx-dataview > .mx-dataview-controls,
+    > .mx-placeholder > .mx-dataview > .mx-dataview-controls {
+      padding: $spacing-medium $spacing-large;
+
+      .btn + .btn {
+        margin-left: 0;
+      }
+
+      .btn:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.mx-underlay {
+  background-color: $global-brand-black;
+}

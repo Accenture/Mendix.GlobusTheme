@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// Table - widgets
+// -----------------------------------------------------------------------------
+
+table.mx-table {
+  > tbody {
+    > tr {
+      border-bottom: 1px solid $border-color-default;
+
+      > th {
+        font-weight: $font-weight-semibold;
+      }
+
+      > td {
+        vertical-align: middle;
+      }
+
+      > th,
+      > td {
+        padding: $padding-table-cell-top $padding-table-cell-right
+          $padding-table-cell-bottom $padding-table-cell-left;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// -----------------------------------------------------------------------------
+// Badges - widgets
+// -----------------------------------------------------------------------------
+
+.badge {
+  border-radius: ($border-radius-default * 4);
+  font-size: $font-size-small;
+  font-weight: $font-weight-bold;
+  padding: 3px 14px 4px;
+}

@@ -1,0 +1,33 @@
+// -----------------------------------------------------------------------------
+// Mixins
+// -----------------------------------------------------------------------------
+
+// Switch buttons styling for IOS and Desktop
+@mixin switch-ios($brand-style, $background-color, $border-color) {
+  &.checked {
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    box-shadow: none;
+
+    .widget-switch-btn {
+      background-color: $brand-style;
+    }
+  }
+}
+
+// Switch buttons styling for Android
+@mixin switch-android($brand-style, $background-color, $border-color) {
+  background-color: $background-color;
+  border-color: $border-color;
+  box-shadow: none;
+
+  &.checked {
+    background-color: $background-color;
+    border-color: $border-color;
+    box-shadow: none;
+
+    .widget-switch-btn {
+      background-color: $brand-style;
+    }
+  }
+}

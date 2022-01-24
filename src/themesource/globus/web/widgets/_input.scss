@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// Input - widgets
+// -----------------------------------------------------------------------------
+
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  background-color: $form-input-bg-disabled;
+  color: $form-input-disabled-color;
+  opacity: 1;
+}
+
+.form-group {
+  .control-label {
+    margin-bottom: ($spacing-small / 2);
+  }
+}
+
+.has-error {
+  .radio,
+  .radio-inline {
+    color: $global-brand-danger;
+  }
+
+  .form-control {
+    box-shadow: none;
+    border-color: $global-brand-danger;
+  }
+}
+
+select.form-control {
+  background-image: url("../../../img/Globus$Images$Caret.svg");
+  padding-right: $spacing-large;
+}
+
+.mx-compound-control {
+  .mx-button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: $spacing-small / 2;
+    padding: 6px 12px;
+
+    .glyphicon-calendar {
+      display: block;
+
+      &::before {
+        background-image: url("/img/Globus$Images$Calendar.svg");
+        background-repeat: no-repeat;
+        background-size: 15px;
+        font-size: 0;
+        display: block;
+        height: 15px;
+        width: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $screen-md) {
+  .form-horizontal {
+    .control-label {
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0;
+    }
+  }
+}
+
+::placeholder {
+  color: $form-input-placeholder-color;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $form-input-placeholder-color;
+}
+
+::-ms-input-placeholder {
+  color: $form-input-placeholder-color;
+}

@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Button - widgets
+// -----------------------------------------------------------------------------
+
+.btn,
+.mx-button {
+  padding: ($spacing-small / 2) $spacing-small;
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  pointer-events: visible;
+  opacity: 0.8;
+}

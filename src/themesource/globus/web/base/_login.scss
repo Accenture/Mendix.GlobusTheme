@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------------------
+// Login page
+// -----------------------------------------------------------------------------
+
+.loginpage {
+  &-image {
+    background-image: url("/img/Globus$Images$Loginpage_bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    overflow: hidden;
+    -webkit-clip-path: none;
+    clip-path: none;
+    animation: none;
+    border-radius: 0 40px 40px 0;
+  }
+
+  &-logo {
+    position: static;
+    width: 130px;
+    margin-bottom: 40px;
+  }
+
+  &-formwrapper {
+    width: 300px;
+    max-width: 100%;
+  }
+
+  &-left {
+    width: 45%;
+    flex: 0 0 45%;
+  }
+
+  &-right {
+    max-width: 100%;
+    padding: 0 $spacing-small;
+
+    @media (min-width: $screen-xl) {
+      width: 40%;
+      flex: 0 0 40%;
+    }
+  }
+}
+
+.loginpage-title {
+  margin-bottom: $spacing-small / 2;
+}
+
+.loginpage-form {
+  .btn {
+    border-radius: $border-radius-default;
+  }
+
+  .form-group {
+    align-items: stretch;
+
+    .control-label {
+      margin-bottom: $spacing-small / 2;
+      font-size: $font-size-small;
+      font-weight: $font-weight-semibold;
+    }
+
+    .inputwrapper {
+      .form-control {
+        width: 100%;
+        padding-left: $form-input-padding-x;
+        padding-right: 40px;
+      }
+
+      .glyphicon {
+        right: $form-input-padding-x;
+        left: unset;
+
+        &:before {
+          background-repeat: no-repeat;
+          background-size: $form-input-glyphicon-size;
+          font-size: 0;
+          display: block;
+          height: $form-input-glyphicon-size;
+          width: $form-input-glyphicon-size;
+        }
+
+        &.glyphicon-eye-open {
+          &::before {
+            background-image: url("/img/Globus$Images$Eye_open.svg");
+          }
+        }
+
+        &.glyphicon-eye-close {
+          &::before {
+            background-image: url("/img/Globus$Images$Eye_closed.svg");
+          }
+        }
+      }
+    }
+  }
+}

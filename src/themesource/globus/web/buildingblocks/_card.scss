@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// Cards
+// -----------------------------------------------------------------------------
+
+.card {
+  border: 1px solid $global-brand-gray-tint;
+  overflow: visible;
+  padding: $spacing-medium;
+  margin-bottom: 0;
+
+  .card-title {
+    border-bottom: 1px solid $border-color-default;
+    padding-bottom: $spacing-small;
+  }
+
+  @media (min-width: $screen-sm) {
+    padding: $spacing-large;
+  }
+}

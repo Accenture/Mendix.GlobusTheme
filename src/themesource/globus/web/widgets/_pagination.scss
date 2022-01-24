@@ -1,0 +1,130 @@
+// -----------------------------------------------------------------------------
+// Pagination - widgets
+// -----------------------------------------------------------------------------
+
+.widget-pagination {
+  .pagination {
+    display: flex;
+    flex-wrap: wrap;
+    margin: $spacing-medium 0;
+    border-radius: 0;
+
+    .btn,
+    .mx-button {
+      display: flex;
+      align-items: center;
+      border-radius: $border-radius-default;
+      border: 1px solid $global-brand-gray;
+      font-size: $font-size-small;
+      color: $global-brand-link;
+      outline: none;
+      margin: 0;
+
+      &:hover,
+      &:focus:not(.active) {
+        border-color: $global-brand-gray;
+        background-color: $global-brand-gray;
+        outline: none;
+      }
+
+      > span {
+        background-color: transparent;
+      }
+
+      span.nextButton {
+        margin-right: 0;
+      }
+
+      span.previousButton {
+        margin-left: 0;
+      }
+
+      .glyphicon {
+        width: 12px;
+        height: 10px;
+        font-size: 0;
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        &::before {
+          display: none;
+        }
+
+        &.glyphicon-backward {
+          margin-right: $spacing-medium / 4;
+          background-image: url("../../../img/Globus$Images$Arrow_left.svg");
+        }
+
+        &.glyphicon-forward {
+          margin-left: $spacing-medium / 4;
+          background-image: url("../../../img/Globus$Images$Arrow_right.svg");
+        }
+      }
+    }
+
+    ul li {
+      width: $pagination-btn-size;
+      height: $pagination-btn-size;
+      border: 1px solid $global-brand-gray-primary;
+      background-color: $global-brand-white;
+      font-size: $font-size-small;
+      color: $global-brand-link;
+      line-height: $line-height-base;
+      justify-content: center;
+      margin: 0;
+
+      &:first-child {
+        border-radius: $border-radius-default 0 0 $border-radius-default;
+      }
+
+      &:last-child {
+        border-radius: 0 $border-radius-default $border-radius-default 0;
+      }
+
+      &:first-child:last-child {
+        border-radius: $border-radius-default;
+      }
+
+      &:not(:last-child) {
+        border-right: none;
+      }
+
+      &:hover:not(.break-view),
+      &:focus:not(.active):not(.break-view) {
+        border-color: $global-brand-gray;
+        background-color: $global-brand-gray;
+        box-shadow: none;
+        outline: none;
+      }
+
+      &.active:not(.break-view),
+      &.active:not(.break-view):hover,
+      &.active:not(.break-view):focus {
+        background-color: $global-brand-link;
+        box-shadow: none;
+        outline: none;
+        cursor: not-allowed;
+      }
+    }
+
+    .disabled,
+    .disabled:hover,
+    .disabled:focus,
+    .disabled > span {
+      background-color: $global-brand-white;
+      border-color: $global-brand-gray-primary;
+      color: $global-brand-gray-primary;
+      opacity: 1;
+
+      .glyphicon {
+        &.glyphicon-backward {
+          background-image: url("../../../img/Globus$Images$Arrow_left_disabled.svg");
+        }
+
+        &.glyphicon-forward {
+          background-image: url("../../../img/Globus$Images$Arrow_right_disabled.svg");
+        }
+      }
+    }
+  }
+}

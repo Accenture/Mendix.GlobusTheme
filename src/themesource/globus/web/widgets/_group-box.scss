@@ -1,0 +1,24 @@
+// -----------------------------------------------------------------------------
+// Groupbox - widgets
+// -----------------------------------------------------------------------------
+
+.mx-groupbox {
+  > .mx-groupbox-header {
+    align-items: center;
+    display: flex;
+    font-weight: $font-weight-semibold;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    min-height: 38px;
+    padding: ($spacing-small / 2) $spacing-small;
+
+    .mx-groupbox-collapse-icon {
+      font-size: $font-size-small;
+      margin: 0;
+    }
+  }
+
+  > .mx-groupbox-body {
+    padding: ($spacing-small / 2) $spacing-small;
+  }
+}

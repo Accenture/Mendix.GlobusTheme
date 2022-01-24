@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// Datagrid - widgets
+// -----------------------------------------------------------------------------
+
+.mx-datagrid {
+  table {
+    th {
+      font-weight: $font-weight-semibold;
+      padding: $grid-padding-top * 1.5 $grid-padding-right $grid-padding-bottom
+        $grid-padding-left;
+    }
+
+    tbody tr {
+      td {
+        line-height: 18px;
+      }
+    }
+  }
+}

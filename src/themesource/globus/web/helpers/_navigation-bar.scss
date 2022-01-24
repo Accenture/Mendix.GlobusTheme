@@ -1,0 +1,75 @@
+// -----------------------------------------------------------------------------
+// Navigation - helpers
+// -----------------------------------------------------------------------------
+
+.region-topbar {
+  .mx-navbar {
+    ul.nav {
+      & > li.mx-navbar-item {
+        margin-left: 0;
+      }
+
+      & > li.mx-navbar-item:not(.dropdown) {
+        &.active {
+          position: relative;
+
+          & > a {
+            color: $navtopbar-color-active;
+          }
+
+          &::after {
+            background-color: $link-color;
+            border-radius: 4px 4px 0 0;
+            bottom: 0;
+            content: "";
+            height: 3px;
+            left: 50%;
+            position: absolute;
+            transform: translateX(-50%);
+            width: 36px;
+          }
+        }
+      }
+
+      & > .mx-navbar-item.open {
+        & > a {
+          background-color: $navtopbar-sub-bg;
+          color: $navtopbar-color;
+
+          &:hover,
+          &:focus {
+            background-color: $navtopbar-sub-bg;
+            color: $navtopbar-color;
+          }
+        }
+
+        .dropdown-menu {
+          background-color: $navtopbar-sub-bg;
+        }
+      }
+
+      & > .mx-navbar-item.open .dropdown-menu {
+        border: 0;
+        border-radius: 0 0 $border-radius-default $border-radius-default;
+        box-shadow: 0 2px 4px 0 rgba($global-brand-black, 0.08);
+        margin: 0;
+        min-width: 190px;
+        padding: ($spacing-small / 2) 0;
+
+        & > li.mx-navbar-subitem {
+          & > a {
+            line-height: $line-height-base;
+            margin-bottom: 0;
+            padding: ($spacing-small / 2) $spacing-medium;
+
+            &:hover,
+            &:focus {
+              background-color: $navtopbar-sub-bg-hover;
+              color: $navtopbar-sub-color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

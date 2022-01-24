@@ -1,0 +1,84 @@
+// -----------------------------------------------------------------------------
+// Table - helpers
+// -----------------------------------------------------------------------------
+
+.mx-listview-grid-rwd .mx-listview-grid-title,
+table.table-rwd .table-rwd-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: $screen-md-max) {
+  .mx-listview-grid-rwd-header,
+  .table-rwd-header {
+    display: none;
+  }
+
+  .mx-listview-grid-rwd .mx-table,
+  table.table-rwd.mx-table {
+    display: flex;
+
+    & > ul {
+      width: 100%;
+    }
+
+    > tbody {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+
+      > tr {
+        width: 100%;
+        border-bottom: 1px solid $border-color-default;
+
+        &:nth-child(2) {
+          border-top: 1px solid $border-color-default;
+        }
+
+        td {
+          display: flex;
+          padding: ($padding-table-cell-top / 2) 0
+            ($padding-table-cell-bottom / 2) 0;
+          border: none;
+
+          &:first-child {
+            padding-top: $padding-table-cell-top;
+          }
+
+          &:last-child {
+            padding-bottom: $padding-table-cell-bottom;
+          }
+
+          > div {
+            flex: 1 0 50%;
+            width: 50%;
+
+            &:first-child {
+              text-align: left;
+            }
+
+            &:nth-child(2) {
+              text-align: right;
+            }
+          }
+
+          .mx-listview-grid-title,
+          .table-rwd-title {
+            clip: auto;
+            position: relative;
+            font-weight: $font-weight-semibold;
+            width: auto;
+            height: auto;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}

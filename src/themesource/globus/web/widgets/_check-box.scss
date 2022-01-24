@@ -1,0 +1,38 @@
+// -----------------------------------------------------------------------------
+// Checkbox - widgets
+// -----------------------------------------------------------------------------
+
+.mx-checkbox {
+  &.label-after {
+    align-items: center;
+    flex-direction: row;
+  }
+}
+
+input[type="checkbox"] {
+  &.disabled,
+  &[disabled] {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:checked:disabled::before {
+    border-color: $form-input-border-color;
+    background-color: $form-input-bg-disabled;
+  }
+
+  &:disabled:after,
+  &:checked:disabled:after {
+    border-color: $form-input-disabled-color;
+  }
+
+  & + .control-label {
+    color: $global-brand-text-default;
+    cursor: pointer;
+    font-size: $font-size-default;
+    font-weight: $font-weight-normal;
+  }
+}

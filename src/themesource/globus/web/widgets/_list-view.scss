@@ -1,0 +1,65 @@
+// -----------------------------------------------------------------------------
+// Listview - widgets
+// -----------------------------------------------------------------------------
+
+.mx-listview-grid-header {
+  .widget-header-sort {
+    .sort-header {
+      font-weight: $font-weight-semibold;
+      padding: 0;
+    }
+  }
+
+  &.mx-table {
+    > tbody {
+      > tr {
+        border: none;
+
+        > td {
+          padding: $listview-padding-top * 1.5 $listview-padding-right
+            $listview-padding-bottom $listview-padding-left;
+          font-weight: $font-weight-semibold;
+        }
+      }
+    }
+  }
+}
+
+.mx-listview-grid {
+  & > ul {
+    & > li {
+      padding: 0;
+      background-color: transparent;
+    }
+  }
+
+  .mx-table {
+    > tbody {
+      > tr {
+        border-bottom: none;
+
+        > td {
+          padding: $listview-padding-top $listview-padding-right
+            $listview-padding-bottom $listview-padding-left;
+          font-weight: $font-weight-normal;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  &-condensed {
+    .mx-table {
+      > tbody {
+        > tr {
+          > td {
+            padding: $listview-padding-top-condensed
+              $listview-padding-right-condensed
+              $listview-padding-bottom-condensed
+              $listview-padding-left-condensed;
+          }
+        }
+      }
+    }
+  }
+}

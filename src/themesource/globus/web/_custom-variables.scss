@@ -1,0 +1,620 @@
+// -----------------------------------------------------------------------------
+// Variables
+// -----------------------------------------------------------------------------
+
+// Global brand variables
+$global-brand-primary: #244a63;
+$global-brand-inverse: #242c36;
+$global-brand-info: #007bc2;
+$global-brand-success: #00875d;
+$global-brand-warning: #bf5706;
+$global-brand-danger: #cd001e;
+$global-brand-default: #d9d9d9;
+
+$global-brand-white: #fff;
+$global-brand-black: #000;
+$global-brand-page-bg: #f6fafc;
+
+$global-brand-text-default: #4a4a4a;
+$global-brand-text-primary: #244a63;
+$global-brand-text-secondary: #5c798c;
+
+$global-brand-gray: #e5e5e5;
+$global-brand-gray-dark: #687386;
+$global-brand-gray-light: #f5f5f5;
+$global-brand-gray-tint: #edf2f5;
+$global-brand-gray-primary: #d9d9d9;
+
+$global-brand-link: #0084db;
+
+// Brand Colors
+$brand-default: $global-brand-default;
+$brand-primary: $global-brand-primary;
+$brand-success: $global-brand-success;
+$brand-warning: $global-brand-warning;
+$brand-danger: $global-brand-danger;
+
+$brand-logo: false;
+$brand-logo-height: 30px;
+$brand-logo-width: 30px;
+
+// Default Font Size & Color
+$font-size-default: 14px;
+$font-color-default: $global-brand-text-default;
+
+// Global Border Color
+$border-color-default: $global-brand-gray;
+$border-radius-default: 4px;
+
+// Topbar
+$topbar-bg: $global-brand-white;
+$topbar-minimalheight: 60px;
+$topbar-border-color: $global-brand-white;
+
+// Sidebar
+$sidebar-bg: $global-brand-white;
+
+// Topbar mobile
+$m-header-height: 48px;
+$m-header-bg: $topbar-bg;
+$m-header-color: $font-color-default;
+$m-header-title-size: 16px;
+
+// Navbar Brand Name
+$navbar-brand-name: $font-color-default;
+
+// Backgrounds
+$bg-color: $global-brand-page-bg;
+$bg-color-secondary: $global-brand-white;
+
+// Default Link Color
+$link-color: $global-brand-link;
+$link-hover-color: $global-brand-link;
+
+// Font Family Import
+$font-family-import: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap";
+
+// Font Family
+$font-family-base: "Source Sans Pro", sans-serif;
+
+// Font Sizes
+$font-size-small: 12px;
+$font-size-large: 16px;
+
+// Font Weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Font Size Headers
+$font-size-h1: 31px;
+$font-size-h2: 26px;
+$font-size-h3: 24px;
+$font-size-h4: 18px;
+$font-size-h5: 14px;
+$font-size-h6: 12px;
+
+// Font Weight Headers
+$font-weight-header: $font-weight-bold;
+
+// Font Header Margin
+$font-header-margin: 0 0 24px;
+
+// Line Height
+$line-height-base: 1.42857143;
+
+// Text Colors
+$font-color-detail: $global-brand-text-secondary;
+$font-color-header: $global-brand-primary;
+
+// Navigation
+
+// Default Navigation styling
+$navigation-item-height: unset;
+$navigation-item-padding: 8px 16px;
+
+$navigation-font-size: $font-size-default;
+$navigation-sub-font-size: $font-size-default;
+$navigation-glyph-size: 20px;
+
+$navigation-color: $font-color-default;
+$navigation-color-hover: $font-color-default;
+$navigation-color-active: $font-color-default;
+
+$navigation-sub-color: $font-color-default;
+$navigation-sub-color-hover: $font-color-default;
+$navigation-sub-color-active: $font-color-default;
+
+// Navigation Sidebar
+$navsidebar-bg: $sidebar-bg;
+$navsidebar-bg-hover: $sidebar-bg;
+$navsidebar-bg-active: $bg-color;
+
+$navsidebar-sub-bg: $global-brand-gray-tint;
+$navsidebar-sub-bg-hover: $navsidebar-sub-bg;
+$navsidebar-sub-bg-active: $navsidebar-sub-bg;
+
+$navsidebar-border-color: $global-brand-white;
+
+$navsidebar-font-size: $font-size-default;
+$navsidebar-sub-font-size: $font-size-default;
+$navsidebar-glyph-size: 20px;
+
+$navsidebar-color: $global-brand-primary;
+$navsidebar-color-hover: $link-color;
+$navsidebar-color-active: $link-color;
+
+$navsidebar-sub-color: $global-brand-primary;
+$navsidebar-sub-color-hover: $link-color;
+$navsidebar-sub-color-active: $link-color;
+
+$navsidebar-width-closed: 60px;
+$navsidebar-width-open: 280px;
+
+// Navigation topbar
+$navtopbar-font-size: $font-size-default;
+$navtopbar-sub-font-size: $font-size-default;
+$navtopbar-glyph-size: 20px;
+
+$navtopbar-bg: $topbar-bg;
+$navtopbar-bg-hover: $topbar-bg;
+$navtopbar-bg-active: $topbar-bg;
+$navtopbar-color: $global-brand-primary;
+$navtopbar-color-hover: $link-color;
+$navtopbar-color-active: $global-brand-primary;
+
+$navtopbar-sub-bg: $global-brand-gray-tint;
+$navtopbar-sub-bg-hover: $navtopbar-sub-bg;
+$navtopbar-sub-bg-active: $navtopbar-sub-bg;
+$navtopbar-sub-color: $global-brand-primary;
+$navtopbar-sub-color-hover: $link-color;
+$navtopbar-sub-color-active: $link-color;
+
+$navtopbar-border-color: $topbar-border-color;
+
+// Form
+$form-input-style: default;
+
+// Form Label
+$form-label-color: $global-brand-primary;
+$form-label-size: $font-size-small;
+$form-label-weight: $font-weight-semibold;
+$form-label-gutter: 8px;
+
+// Form Input dimensions
+$form-input-height: auto;
+$form-input-padding-y: 8px;
+$form-input-padding-x: 10px;
+$form-input-static-padding-y: 8px;
+$form-input-static-padding-x: 0;
+$form-input-font-size: $font-size-default;
+$form-input-line-height: $line-height-base;
+$form-input-border-radius: $border-radius-default;
+
+// Form Input styling
+$form-input-bg: $global-brand-white;
+$form-input-bg-focus: $global-brand-white;
+$form-input-bg-hover: $global-brand-white;
+$form-input-bg-disabled: $global-brand-gray-light;
+$form-input-color: $global-brand-text-default;
+$form-input-focus-color: $global-brand-text-default;
+$form-input-disabled-color: $global-brand-gray-primary;
+$form-input-placeholder-color: rgba($global-brand-text-default, 0.5);
+$form-input-border-color: $global-brand-gray-primary;
+$form-input-border-focus-color: $global-brand-primary;
+$form-input-glyphicon-size: 14px;
+
+// Form Input Static styling
+$form-input-static-border-color: $border-color-default;
+
+// Form Group
+$form-group-margin-bottom: 24px;
+$form-group-gutter: 12px;
+
+// Buttons
+$btn-font-size: 14px;
+$btn-bordered: false;
+$btn-border-radius: $border-radius-default;
+
+$btn-default-bg: $global-brand-white;
+$btn-primary-bg: $brand-primary;
+$btn-success-bg: $brand-success;
+$btn-warning-bg: $brand-warning;
+$btn-danger-bg: $brand-danger;
+
+$btn-default-border-color: $global-brand-gray-primary;
+$btn-primary-border-color: $brand-primary;
+$btn-success-border-color: $brand-success;
+$btn-warning-border-color: $brand-warning;
+$btn-danger-border-color: $brand-danger;
+
+$btn-default-color: $link-color;
+$btn-primary-color: $global-brand-white;
+$btn-success-color: $global-brand-white;
+$btn-warning-color: $global-brand-white;
+$btn-danger-color: $global-brand-white;
+
+$btn-default-icon-color: $global-brand-gray-dark;
+
+$btn-default-bg-hover: $global-brand-gray;
+$btn-primary-bg-hover: mix($btn-primary-bg, $global-brand-black, 80%);
+$btn-success-bg-hover: mix($btn-success-bg, $global-brand-black, 80%);
+$btn-warning-bg-hover: mix($btn-warning-bg, $global-brand-black, 80%);
+$btn-danger-bg-hover: mix($btn-danger-bg, $global-brand-black, 80%);
+$btn-link-bg-hover: $global-brand-gray;
+
+// Color variations
+$color-default-darker: mix(
+  $global-brand-gray-primary,
+  $global-brand-black,
+  60%
+);
+$color-default-dark: mix($global-brand-gray-primary, $global-brand-black, 70%);
+$color-default-light: mix($global-brand-gray-primary, $global-brand-white, 40%);
+$color-default-lighter: mix(
+  $global-brand-gray-primary,
+  $global-brand-white,
+  10%
+);
+
+$color-primary-darker: mix($brand-primary, $global-brand-black, 60%);
+$color-primary-dark: mix($brand-primary, $global-brand-black, 70%);
+$color-primary-light: mix($brand-primary, $global-brand-white, 40%);
+$color-primary-lighter: mix($brand-primary, $global-brand-white, 10%);
+
+$color-success-darker: mix($brand-success, $global-brand-black, 60%);
+$color-success-dark: mix($brand-success, $global-brand-black, 70%);
+$color-success-light: mix($brand-success, $global-brand-white, 40%);
+$color-success-lighter: mix($brand-success, $global-brand-white, 10%);
+
+$color-warning-darker: mix($brand-warning, $global-brand-black, 60%);
+$color-warning-dark: mix($brand-warning, $global-brand-black, 70%);
+$color-warning-light: mix($brand-warning, $global-brand-white, 40%);
+$color-warning-lighter: mix($brand-warning, $global-brand-white, 10%);
+
+$color-danger-darker: mix($brand-danger, $global-brand-black, 60%);
+$color-danger-dark: mix($brand-danger, $global-brand-black, 70%);
+$color-danger-light: mix($brand-danger, $global-brand-white, 40%);
+$color-danger-lighter: mix($brand-danger, $global-brand-white, 10%);
+
+// Grids
+$grid-border-color: $border-color-default;
+
+$grid-padding-top: 16px;
+$grid-padding-right: 16px;
+$grid-padding-bottom: 16px;
+$grid-padding-left: 16px;
+
+// Listview
+$listview-padding-top: 16px;
+$listview-padding-right: 16px;
+$listview-padding-bottom: 16px;
+$listview-padding-left: 16px;
+
+// Listview condensed
+$listview-padding-top-condensed: 8px;
+$listview-padding-right-condensed: 16px;
+$listview-padding-bottom-condensed: 8px;
+$listview-padding-left-condensed: 16px;
+
+// Background colors
+$grid-bg: $global-brand-white;
+$grid-bg-header: transparent;
+$grid-bg-hover: transparent;
+$grid-bg-selected: $global-brand-gray-tint;
+$grid-bg-selected-hover: $global-brand-gray-tint;
+
+// Striped Background Color
+$grid-bg-striped: mix($grid-border-color, $global-brand-white, 10%);
+
+// Background Footer Color
+$grid-footer-bg: transparent;
+
+// Text Color
+$grid-selected-color: $font-color-default;
+
+// Paging Colors
+$grid-paging-bg: transparent;
+$grid-paging-bg-hover: transparent;
+$grid-paging-border-color: transparent;
+$grid-paging-border-color-hover: transparent;
+$grid-paging-color: rgba($global-brand-text-secondary, 0.5);
+$grid-paging-color-hover: $global-brand-text-secondary;
+
+// Tabs
+$tabs-color: $global-brand-text-default;
+$tabs-color-active: $global-brand-primary;
+$tabs-lined-color-active: $global-brand-link;
+
+$tabs-lined-border-width: 3px;
+
+$tabs-border-color: $global-brand-gray-tint;
+$tabs-lined-border-color: $global-brand-link;
+
+$tabs-bg: $global-brand-white;
+$tabs-bg-pills: $global-brand-gray-primary;
+$tabs-bg-hover: transparent;
+$tabs-bg-active: transparent;
+
+// Modals
+$modal-header-bg: transparent;
+$modal-header-border-color: $border-color-default;
+$modal-header-color: $global-brand-primary;
+
+// Dataview
+$dataview-controls-bg: transparent;
+$dataview-controls-border-color: $border-color-default;
+
+$dataview-emptymessage-bg: $bg-color;
+$dataview-emptymessage-color: $font-color-default;
+
+// Alerts
+$alert-success-bg: $color-success-lighter;
+$alert-warning-bg: $color-warning-lighter;
+$alert-danger-bg: $color-danger-lighter;
+
+$alert-success-color: $global-brand-success;
+$alert-warning-color: $global-brand-warning;
+$alert-danger-color: $global-brand-danger;
+
+$alert-success-border-color: $global-brand-success;
+$alert-warning-border-color: $global-brand-warning;
+$alert-danger-border-color: $global-brand-danger;
+
+// Wizard
+$wizard-step-height: 44px;
+$wizard-step-number-size: 64px;
+$wizard-step-number-font-size: 20px;
+
+$wizard-default-bg: $global-brand-white;
+$wizard-default-color: $font-color-default;
+$wizard-default-step-color: $font-color-default;
+$wizard-default-border-color: $border-color-default;
+
+$wizard-active-bg: $global-brand-primary;
+$wizard-active-color: $global-brand-white;
+$wizard-active-step-color: $color-primary-dark;
+$wizard-active-border-color: $global-brand-primary;
+
+$wizard-visited-bg: $global-brand-success;
+$wizard-visited-color: $global-brand-white;
+$wizard-visited-step-color: $global-brand-link;
+$wizard-visited-border-color: $global-brand-success;
+
+// Labels
+$label-default-bg: $brand-default;
+$label-primary-bg: $brand-primary;
+$label-success-bg: $brand-success;
+$label-warning-bg: $brand-warning;
+$label-danger-bg: $brand-danger;
+
+$label-default-border-color: $brand-default;
+$label-primary-border-color: $brand-primary;
+$label-success-border-color: $brand-success;
+$label-warning-border-color: $brand-warning;
+$label-danger-border-color: $brand-danger;
+
+$label-default-color: $font-color-default;
+$label-primary-color: $global-brand-white;
+$label-success-color: $global-brand-white;
+$label-warning-color: $global-brand-white;
+$label-danger-color: $global-brand-white;
+
+// Groupbox
+$groupbox-default-bg: $global-brand-gray-primary;
+$groupbox-primary-bg: $brand-primary;
+$groupbox-success-bg: $brand-success;
+$groupbox-warning-bg: $brand-warning;
+$groupbox-danger-bg: $brand-danger;
+$groupbox-white-bg: $global-brand-white;
+
+$groupbox-default-color: $font-color-default;
+$groupbox-primary-color: $global-brand-white;
+$groupbox-success-color: $global-brand-white;
+$groupbox-warning-color: $global-brand-white;
+$groupbox-danger-color: $global-brand-white;
+$groupbox-white-color: $font-color-default;
+
+// Callout (groupbox)
+$callout-default-color: $font-color-default;
+$callout-success-color: $brand-success;
+$callout-warning-color: $brand-warning;
+$callout-danger-color: $brand-danger;
+
+$callout-default-bg: $color-default-lighter;
+$callout-success-bg: $color-success-lighter;
+$callout-warning-bg: $color-warning-lighter;
+$callout-danger-bg: $color-danger-lighter;
+
+// Spacing
+// Smallest spacing
+$spacing-smallest: 4px;
+
+// Smaller spacing
+$spacing-smaller: 8px;
+
+// Small spacing
+$spacing-small: 16px;
+
+// Medium spacing
+$spacing-medium: 24px;
+$t-spacing-medium: 16px;
+$m-spacing-medium: 16px;
+
+// Large spacing
+$spacing-large: 32px;
+$t-spacing-large: 24px;
+$m-spacing-large: 16px;
+
+// Larger spacing
+$spacing-larger: 40px;
+
+// Largest spacing
+$spacing-largest: 48px;
+
+// Layout spacing
+$layout-spacing-top: 32px;
+$layout-spacing-right: 32px;
+$layout-spacing-bottom: 32px;
+$layout-spacing-left: 32px;
+
+$t-layout-spacing-top: 24px;
+$t-layout-spacing-right: 24px;
+$t-layout-spacing-bottom: 24px;
+$t-layout-spacing-left: 24px;
+
+$m-layout-spacing-top: 16px;
+$m-layout-spacing-right: 16px;
+$m-layout-spacing-bottom: 16px;
+$m-layout-spacing-left: 16px;
+
+// Combined layout spacing
+$layout-spacing: $layout-spacing-top $layout-spacing-right
+  $layout-spacing-bottom $layout-spacing-left;
+$m-layout-spacing: $m-layout-spacing-top $m-layout-spacing-right
+  $m-layout-spacing-bottom $m-layout-spacing-left;
+$t-layout-spacing: $t-layout-spacing-top $t-layout-spacing-right
+  $t-layout-spacing-bottom $t-layout-spacing-left;
+
+// Gutter size
+$gutter-size: 12px;
+
+// Pagination
+$pagination-btn-size: 38px;
+
+// Tables
+$padding-table-cell-top: 16px;
+$padding-table-cell-bottom: 16px;
+$padding-table-cell-left: 16px;
+$padding-table-cell-right: 16px;
+
+// Tooltips
+$tooltip-arrow-size: 4px;
+
+// Media queries breakpoints
+$screen-xs: 480px;
+$screen-sm: 576px;
+$screen-md: 768px;
+$screen-lg: 992px;
+$screen-xl: 1200px;
+
+$screen-xs-max: ($screen-sm - 1);
+$screen-sm-max: ($screen-md - 1);
+$screen-md-max: ($screen-lg - 1);
+$screen-lg-max: ($screen-xl - 1);
+
+// Use of !important
+$important-flex: true;
+$important-spacing: true;
+$important-helpers: true;
+
+// -----------------------------------------------------------------------------
+// Legacy variables
+// -----------------------------------------------------------------------------
+
+// Brand Colors
+$brand-inverse: $global-brand-inverse;
+$brand-info: $global-brand-info;
+
+// Buttons
+$btn-inverse-bg: $brand-inverse;
+$btn-info-bg: $brand-info;
+
+$btn-inverse-border-color: $brand-inverse;
+$btn-info-border-color: $brand-info;
+
+$btn-inverse-color: $global-brand-white;
+$btn-info-color: $global-brand-white;
+
+$btn-inverse-bg-hover: mix($btn-inverse-bg, $global-brand-white, 80%);
+$btn-info-bg-hover: mix($btn-info-bg, $global-brand-black, 80%);
+
+// Color variations
+$color-inverse-darker: mix($brand-inverse, $global-brand-black, 60%);
+$color-inverse-dark: mix($brand-inverse, $global-brand-black, 70%);
+$color-inverse-light: mix($brand-inverse, $global-brand-white, 60%);
+$color-inverse-lighter: mix($brand-inverse, $global-brand-white, 10%);
+
+$color-info-darker: mix($brand-info, $global-brand-black, 60%);
+$color-info-dark: mix($brand-info, $global-brand-black, 70%);
+$color-info-light: mix($brand-info, $global-brand-white, 60%);
+$color-info-lighter: mix($brand-info, $global-brand-white, 10%);
+
+// Alerts
+$alert-info-bg: $color-info-lighter;
+$alert-info-color: $global-brand-info;
+$alert-info-border-color: $global-brand-info;
+
+// Labels
+$label-info-bg: $brand-info;
+$label-inverse-bg: $global-brand-gray-dark;
+
+$label-info-border-color: $brand-info;
+$label-inverse-border-color: $brand-inverse;
+
+$label-info-color: $global-brand-white;
+$label-inverse-color: $global-brand-white;
+
+// Groupbox
+$groupbox-inverse-bg: $brand-inverse;
+$groupbox-info-bg: $brand-info;
+
+$groupbox-inverse-color: $global-brand-white;
+$groupbox-info-color: $global-brand-white;
+
+// Callout (groupbox)
+$callout-info-color: $brand-info;
+
+$callout-info-bg: $color-info-lighter;
+
+// -----------------------------------------------------------------------------
+// TODO
+// -----------------------------------------------------------------------------
+
+// $brand-gradient: linear-gradient(to right top, #264ae5, #2239c5, #1b29a6, #111988, #03096c);
+
+// Timeline
+// $timeline-icon-color: $brand-primary;
+// $timeline-border-color: $border-color-default;
+// $timeline-event-time-color: $brand-primary;
+
+// $timeline-icon-size: 18px;
+// $timeline-image-size: 36px;
+
+// $timeline-grouping-size: 120px;
+// $timeline-grouping-border-radius: 30px;
+// $timeline-grouping-border-color: $timeline-border-color;
+
+// Accordions
+// $accordion-header-default-bg: $bg-color-secondary;
+// $accordion-header-default-bg-hover: $bg-color;
+// $accordion-header-default-color: $font-color-header;
+// $accordion-default-border-color: $border-color-default;
+
+// $accordion-bg-striped: $grid-bg-striped;
+// $accordion-bg-striped-hover: $grid-bg-selected;
+
+// $accordion-header-primary-bg: $btn-primary-bg;
+// $accordion-header-secondary-bg: $btn-default-bg;
+// $accordion-header-success-bg: $btn-success-bg;
+// $accordion-header-warning-bg: $btn-warning-bg;
+// $accordion-header-danger-bg: $btn-danger-bg;
+
+// $accordion-header-primary-bg-hover: $btn-primary-bg-hover;
+// $accordion-header-secondary-bg-hover: $btn-default-bg-hover;
+// $accordion-header-success-bg-hover: $btn-success-bg-hover;
+// $accordion-header-warning-bg-hover: $btn-warning-bg-hover;
+// $accordion-header-danger-bg-hover: $btn-danger-bg-hover;
+
+// $accordion-header-primary-color: $btn-primary-color;
+// $accordion-header-secondary-color: $btn-default-color;
+// $accordion-header-success-color: $btn-success-color;
+// $accordion-header-warning-color: $btn-warning-color;
+// $accordion-header-danger-color: $btn-danger-color;
+
+// $accordion-primary-border-color: $btn-primary-border-color;
+// $accordion-secondary-border-color: $btn-default-border-color;
+// $accordion-success-border-color: $btn-success-border-color;
+// $accordion-warning-border-color: $btn-warning-border-color;
+// $accordion-danger-border-color: $btn-danger-border-color;

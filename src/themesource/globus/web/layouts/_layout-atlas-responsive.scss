@@ -1,0 +1,64 @@
+// -----------------------------------------------------------------------------
+// Atlas layout
+// -----------------------------------------------------------------------------
+
+.layout-atlas-responsive,
+.layout-atlas-responsive-default {
+  @media (min-width: $screen-md) {
+    .mx-scrollcontainer-shrink:not(.mx-scrollcontainer-open) > .region-sidebar,
+    .mx-scrollcontainer-push:not(.mx-scrollcontainer-open) > .region-sidebar,
+    .mx-scrollcontainer-slide:not(.mx-scrollcontainer-open) > .region-sidebar {
+      .mx-scrollcontainer-wrapper > .mx-navigationtree ul li {
+        &.mx-navigationtree-has-items:hover > ul {
+          left: $navsidebar-width-closed;
+          min-width: 200px;
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .widget-sidebar:not(.widget-sidebar-expanded) {
+      .mx-navigationtree ul li {
+        &.mx-navigationtree-has-items:hover {
+          ul {
+            left: $navsidebar-width-closed;
+            min-width: 200px;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+
+  .region-topbar {
+    padding: 0 $spacing-smaller;
+  }
+
+  .region-sidebar {
+    .mx-scrollcontainer-wrapper {
+      & > .mx-navigationtree .navbar-inner > ul > li {
+        & > a {
+          .glyphicon {
+            width: $navsidebar-width-closed;
+          }
+        }
+      }
+    }
+  }
+}
+
+.layout-atlas-responsive-topbar {
+  .region-topbar {
+    @media (max-width: $screen-sm-max) {
+      padding: 0;
+    }
+
+    .toggle-btn {
+      display: none;
+
+      @media (max-width: $screen-sm-max) {
+        display: inline-block;
+      }
+    }
+  }
+}

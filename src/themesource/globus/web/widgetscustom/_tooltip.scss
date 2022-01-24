@@ -1,0 +1,99 @@
+// -----------------------------------------------------------------------------
+// Tooltip - widgets custom
+// -----------------------------------------------------------------------------
+
+.tooltip-widget {
+  align-items: center;
+  display: flex;
+
+  .tooltip-widget-link {
+    display: flex;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+
+    .glyphicon {
+      margin-right: $spacing-small / 2;
+      color: $global-brand-primary;
+    }
+
+    & > img {
+      height: 16px;
+      margin-right: $spacing-small / 2;
+    }
+  }
+}
+
+.tooltip {
+  .tooltip-inner {
+    max-width: 180px;
+    padding: ($spacing-small / 2) ($spacing-medium / 2);
+    line-height: 18px;
+    text-align: left;
+    background-color: $global-brand-white;
+    color: $global-brand-text-default;
+    box-shadow: 0 2px 8px 0 rgba($global-brand-black, 0.08);
+  }
+
+  &.in {
+    opacity: 1;
+  }
+
+  &.top,
+  &.bottom {
+    padding: $tooltip-arrow-size 0;
+
+    .tooltip-arrow {
+      margin-left: -$tooltip-arrow-size * 2;
+    }
+  }
+
+  &.top {
+    margin-top: -$tooltip-arrow-size * 2;
+
+    .tooltip-arrow {
+      border-top-color: $global-brand-white;
+      border-width: $tooltip-arrow-size $tooltip-arrow-size 0;
+    }
+  }
+
+  &.bottom {
+    margin-top: $spacing-small / 2;
+
+    .tooltip-arrow {
+      border-bottom-color: $global-brand-white;
+      border-width: 0 $tooltip-arrow-size $tooltip-arrow-size;
+    }
+  }
+
+  &.left,
+  &.right {
+    padding: 0 $tooltip-arrow-size;
+
+    .tooltip-arrow {
+      margin-top: -$tooltip-arrow-size;
+    }
+  }
+
+  &.left {
+    margin-left: -$spacing-small / 2;
+
+    .tooltip-arrow {
+      border-width: $tooltip-arrow-size 0 $tooltip-arrow-size
+        $tooltip-arrow-size;
+      border-left-color: $global-brand-white;
+    }
+  }
+
+  &.right {
+    margin-left: 0;
+
+    .tooltip-arrow {
+      border-width: $tooltip-arrow-size $tooltip-arrow-size $tooltip-arrow-size
+        0;
+      border-right-color: $global-brand-white;
+    }
+  }
+}

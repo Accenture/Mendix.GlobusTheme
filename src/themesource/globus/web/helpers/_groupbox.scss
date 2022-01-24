@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Groupbox - helpers
+// -----------------------------------------------------------------------------
+
+.groupbox-transparent {
+  > .mx-groupbox-header {
+    padding: ($spacing-small / 2) $spacing-small;
+    font-size: $font-size-default;
+    font-weight: $font-weight-semibold;
+  }
+
+  .mx-groupbox-body {
+    padding: ($spacing-small / 2) $spacing-small;
+  }
+}

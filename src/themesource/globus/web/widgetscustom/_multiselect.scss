@@ -1,0 +1,140 @@
+// -----------------------------------------------------------------------------
+// Multiselect - widgets custom
+// -----------------------------------------------------------------------------
+
+.multiselect {
+  background-image: url("../../../img/Globus$Images$Caret.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - #{$form-input-padding-x}) center;
+  padding-right: $spacing-large;
+
+  .multiselect-selected-text {
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .caret {
+    display: none;
+  }
+}
+
+.multiselect-container {
+  background-clip: initial;
+  border-color: $form-input-border-focus-color;
+  box-shadow: 0 2px 8px 0 rgba($global-brand-black, 0.08);
+  padding-bottom: 6px !important;
+  top: calc(100% + #{$spacing-small / 4});
+  z-index: 98;
+
+  & > li {
+    &.multiselect-item {
+      &.divider {
+        margin: 0 0 6px;
+      }
+
+      &.filter {
+        .input-group {
+          border-bottom: 1px solid $global-brand-gray;
+          margin: 0;
+          padding: 12px 10px;
+          position: relative;
+          width: 100%;
+
+          .input-group-addon {
+            display: none;
+          }
+
+          .multiselect-search {
+            background-image: url("../../../img/Globus$Images$Search_Multiselect.svg");
+            background-repeat: no-repeat;
+            background-position: $form-input-padding-x center;
+            display: block;
+            padding: {
+              left: $spacing-large;
+              right: $spacing-large;
+            }
+          }
+
+          .input-group-btn {
+            right: 10px;
+            position: absolute;
+            width: auto;
+            z-index: 2;
+
+            .multiselect-clear-filter {
+              background-image: url("../../../img/Globus$Images$Close_Multiselect.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-color: transparent;
+              border: 0;
+              padding: 0;
+              height: 37px;
+              width: 32px;
+
+              i {
+                display: none;
+              }
+            }
+          }
+
+          .multiselect-search {
+            border-radius: $border-radius-default;
+          }
+        }
+      }
+    }
+
+    &.active {
+      & > a {
+        background-color: transparent;
+        color: $global-brand-text-default;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: $global-brand-text-default;
+        }
+      }
+    }
+
+    & > a {
+      color: $global-brand-text-default;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: $global-brand-text-default;
+      }
+
+      & > label {
+        align-items: center;
+        display: flex;
+        line-height: 18px;
+        padding: 6px 10px;
+
+        input[type="checkbox"] {
+          margin-right: $spacing-small / 2 !important;
+        }
+      }
+
+      &.multiselect-all {
+        padding: ($spacing-small / 4) 0 !important;
+
+        label {
+          font-weight: $font-weight-normal;
+        }
+      }
+    }
+  }
+}
+
+.btn-group {
+  &.open {
+    .multiselect {
+      box-shadow: none;
+      border-color: $form-input-border-focus-color;
+    }
+  }
+}

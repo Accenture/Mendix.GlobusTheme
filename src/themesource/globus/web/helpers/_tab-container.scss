@@ -1,0 +1,39 @@
+// -----------------------------------------------------------------------------
+// Tabcontainer - helpers
+// -----------------------------------------------------------------------------
+
+.tab-lined.mx-tabcontainer {
+  & > .mx-tabcontainer-tabs {
+    border-width: 1px;
+    border-color: $global-brand-gray-light;
+
+    li {
+      margin-right: 0;
+      margin-bottom: -1px;
+
+      & > a {
+        padding: ($spacing-small / 2) ($spacing-medium / 2);
+        border-bottom-width: 1px;
+
+        &:hover,
+        &:focus {
+          color: $global-brand-primary;
+          border-bottom: 1px solid $global-brand-primary;
+        }
+      }
+
+      &.active > a,
+      &.active > a:hover,
+      &.active > a:focus {
+        border-bottom-width: 1px;
+      }
+    }
+  }
+}
+
+.tab-bordered.mx-tabcontainer {
+  & > .mx-tabcontainer-content {
+    padding: $spacing-medium $spacing-large;
+    background-color: $global-brand-white;
+  }
+}

@@ -1,0 +1,138 @@
+// -----------------------------------------------------------------------------
+// Grid - widgets
+// -----------------------------------------------------------------------------
+
+.mx-grid {
+  .mx-grid-controlbar {
+    margin: 0;
+
+    .mx-grid-toolbar {
+      margin-right: $spacing-small / 4;
+
+      .mx-button + .mx-button {
+        margin-left: $spacing-small / 2;
+      }
+    }
+
+    .mx-grid-pagingbar {
+      display: flex;
+      align-items: center;
+
+      .mx-button {
+        display: flex;
+        padding: $spacing-small / 4;
+        font-size: 0;
+
+        span {
+          &::before {
+            content: "";
+            display: block;
+            height: 12px;
+            width: 12px;
+            background-size: 12px;
+            background-repeat: no-repeat;
+          }
+        }
+
+        &.mx-name-paging-first {
+          span {
+            &::before {
+              background-image: url("/img/Globus$Images$Arrow_lastleft.svg");
+            }
+          }
+        }
+
+        &.mx-name-paging-previous {
+          span {
+            &::before {
+              background-image: url("/img/Globus$Images$Arrow_doubleleft.svg");
+            }
+          }
+        }
+
+        &.mx-name-paging-next {
+          span {
+            &::before {
+              background-image: url("/img/Globus$Images$Arrow_doubleright.svg");
+            }
+          }
+        }
+
+        &.mx-name-paging-last {
+          span {
+            &::before {
+              background-image: url("/img/Globus$Images$Arrow_lastright.svg");
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mx-grid-searchbar {
+    margin: 0 0 $spacing-small;
+
+    .mx-grid-search-inputs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: $spacing-small / 4;
+
+      .mx-grid-search-item {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-right: $spacing-small;
+
+        @media (min-width: $screen-md) {
+          width: 20%;
+          min-width: 200px;
+        }
+
+        .mx-grid-search-label {
+          display: flex;
+          text-align: left;
+          padding: 0;
+          width: 100%;
+
+          label {
+            color: $form-label-color;
+            font-size: $form-label-size;
+            font-weight: $form-label-weight;
+            margin-bottom: $spacing-small / 2;
+            padding-top: 0;
+          }
+        }
+
+        .mx-grid-search-input {
+          padding: 0;
+          width: 100%;
+
+          .mx-button,
+          .form-control {
+            height: auto;
+          }
+
+          .form-control,
+          select.form-control {
+            color: $form-input-color;
+            font-size: $form-input-font-size;
+            padding: $form-input-padding-y $form-input-padding-x;
+          }
+
+          select.form-control {
+            padding-right: $spacing-large;
+          }
+        }
+      }
+    }
+
+    .mx-grid-search-controls {
+      margin-top: $spacing-medium;
+
+      .mx-button + .mx-button {
+        margin-left: $spacing-small / 2;
+      }
+    }
+  }
+}

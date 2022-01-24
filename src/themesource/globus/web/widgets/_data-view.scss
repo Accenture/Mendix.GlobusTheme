@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Dataview - widgets
+// -----------------------------------------------------------------------------
+
+.mx-dataview {
+  .mx-dataview-controls {
+    border-top: 0;
+    margin-top: $spacing-large;
+    padding: 0;
+
+    .mx-button {
+      margin-right: $spacing-small / 2;
+    }
+  }
+}
