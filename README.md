@@ -68,6 +68,7 @@ After we have already installed the module, you need to import variables from Gl
 1. Cut the variables from `theme/web/custom-variables.scss`
 2. In `theme/web/custom-variables.scss` add `@import "../../themesource/Globus/web/custom-variables.scss` to the top of the file
 3. Rebuild your project, if you have any errors in Mendix Studio Pro, close and open again application
+4. If you require a custom login page. Copy login.html file from themesource/Globus/web/ and replace the file in theme/web/
 
 ## Bugs
 The are no known bugs at the moment.
