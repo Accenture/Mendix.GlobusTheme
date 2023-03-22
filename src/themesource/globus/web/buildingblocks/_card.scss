@@ -4,16 +4,32 @@
 
 .card {
   border: 1px solid $global-brand-gray-tint;
-  overflow: visible;
   padding: $spacing-medium;
   margin-bottom: 0;
+  overflow: visible;
+}
 
-  .card-title {
-    border-bottom: 1px solid $border-color-default;
-    padding-bottom: $spacing-small;
+.card-body {
+  padding: $spacing-medium;
+}
+
+.card-overlay {
+  border-radius: 0 0 $border-radius-default $border-radius-default;
+  padding: $spacing-medium;
+}
+
+.card-with-image {
+  padding: 0;
+
+  .card-image {
+    border-radius: $border-radius-default $border-radius-default 0 0;
   }
+}
 
-  @media (min-width: $screen-sm) {
-    padding: $spacing-large;
+.card-with-background {
+  padding: 0;
+
+  .card-image {
+    border-radius: $border-radius-default;
   }
 }

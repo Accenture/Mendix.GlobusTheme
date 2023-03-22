@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// Progress Circle - helpers
+// -----------------------------------------------------------------------------
+
+.widget-progress-circle-primary,
+.widget-progress-circle-success,
+.widget-progress-circle-warning,
+.widget-progress-circle-danger {
+  .progressbar-text {
+    color: $brand-primary !important;
+  }
+}

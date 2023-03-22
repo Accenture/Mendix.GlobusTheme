@@ -2,6 +2,16 @@
 // Input - widgets
 // -----------------------------------------------------------------------------
 
+.form-control {
+  max-height: $form-input-height;
+}
+
+textarea {
+  &.form-control {
+    max-height: none;
+  }
+}
+
 .form-control[disabled],
 .form-control[readonly],
 fieldset[disabled] .form-control {
@@ -12,6 +22,7 @@ fieldset[disabled] .form-control {
 
 .form-group {
   .control-label {
+    line-height: 15px;
     margin-bottom: ($spacing-small / 2);
   }
 }
@@ -23,8 +34,13 @@ fieldset[disabled] .form-control {
   }
 
   .form-control {
-    box-shadow: none;
     border-color: $global-brand-danger;
+    box-shadow: none;
+
+    &:focus {
+      border-color: $global-brand-danger;
+      box-shadow: none;
+    }
   }
 }
 
@@ -34,18 +50,21 @@ select.form-control {
 }
 
 .mx-compound-control {
+  flex-wrap: nowrap;
+  gap: $spacing-smaller;
+
   .mx-button {
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-left: $spacing-small / 2;
-    padding: 6px 12px;
+    margin-left: 0;
+    padding: $spacing-smaller ($spacing-smaller * 1.5);
 
-    .glyphicon-calendar {
+    .glyphicon-calendar,
+    .glyphicon-share-alt {
       display: block;
 
       &::before {
-        background-image: url("/img/Globus$Images$Calendar.svg");
         background-repeat: no-repeat;
         background-size: 15px;
         font-size: 0;
@@ -53,6 +72,44 @@ select.form-control {
         height: 15px;
         width: 15px;
       }
+    }
+
+    .glyphicon-calendar {
+      &::before {
+        background-image: url("/img/Globus$Images$Calendar.svg");
+      }
+    }
+
+    .glyphicon-share-alt {
+      &::before {
+        background-image: url("/img/Globus$Images$Respond_arrow.svg");
+      }
+    }
+
+    &[disabled] {
+      background-color: $form-input-bg-disabled;
+      color: $form-input-disabled-color;
+      opacity: 1;
+    }
+  }
+}
+
+.mx-referenceselector {
+  .form-control[readonly] {
+    background-color: $form-input-bg;
+    color: $form-input-color;
+
+    &[disabled] {
+      background-color: $form-input-bg-disabled;
+      color: $form-input-disabled-color;
+    }
+  }
+}
+
+.mx-fileinput {
+  .mx-compound-control {
+    .mx-button {
+      padding: $spacing-smaller $spacing-small;
     }
   }
 }
@@ -62,9 +119,16 @@ select.form-control {
     .control-label {
       align-items: center;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       margin-bottom: 0;
     }
+  }
+}
+
+.form-horizontal {
+  .form-group {
+    margin-left: -$gutter-size;
+    margin-right: -$gutter-size;
   }
 }
 

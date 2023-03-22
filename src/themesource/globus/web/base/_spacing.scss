@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// Spacing
+// -----------------------------------------------------------------------------
+
+$important-spacing-value: if($important-spacing, " !important", "");
+
+// Spacing smaller
+.spacing-inner-smaller {
+  padding: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-inner-top-smaller {
+  padding-top: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-inner-right-smaller {
+  padding-right: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-inner-bottom-smaller {
+  padding-bottom: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-inner-left-smaller {
+  padding-left: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-outer-smaller {
+  margin: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-outer-top-smaller {
+  margin-top: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-outer-right-smaller {
+  margin-right: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-outer-bottom-smaller {
+  margin-bottom: $spacing-smaller #{$important-spacing-value};
+}
+
+.spacing-outer-left-smaller {
+  margin-left: $spacing-smaller #{$important-spacing-value};
+}

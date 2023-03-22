@@ -3,14 +3,54 @@
 // -----------------------------------------------------------------------------
 
 .btn-sm {
-  padding: ($spacing-small - 10px) ($spacing-small - 4px);
+  height: $btn-small-height;
+  padding: ($spacing-smaller / 2) ($spacing-smaller * 1.5);
 }
 
 .btn-lg {
-  padding: $spacing-small $spacing-large;
+  height: $btn-large-height;
+  padding: $spacing-smaller $spacing-large;
 }
 
 .btn-sm,
 .btn-lg {
   line-height: 1.25;
+}
+
+.btn-icon {
+  align-items: center;
+  display: inline-flex;
+  gap: $spacing-smaller;
+
+  & > img,
+  & > .glyphicon {
+    margin: 0;
+  }
+}
+
+.btn-icon-right {
+  & > img,
+  & > .glyphicon {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.btn-icon-only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: $btn-medium-height;
+  padding: 0;
+  width: $btn-medium-height;
+
+  &.btn-sm {
+    height: $btn-small-height;
+    width: $btn-small-height;
+  }
+
+  &.btn-lg {
+    height: $btn-large-height;
+    width: $btn-large-height;
+  }
 }

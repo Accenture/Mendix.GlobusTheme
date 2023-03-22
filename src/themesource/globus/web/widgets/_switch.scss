@@ -1,3 +1,176 @@
 // -----------------------------------------------------------------------------
 // Switch - widgets
 // -----------------------------------------------------------------------------
+
+.widget-switch-brand-primary,
+.widget-switch-brand-secondary,
+.widget-switch-brand-success,
+.widget-switch-brand-warning,
+.widget-switch-brand-danger {
+  .control-label {
+    color: $global-brand-text-default;
+    font-size: $font-size-default;
+    font-weight: $font-weight-normal;
+  }
+}
+
+.widget-switch-btn-wrapper:focus {
+  outline: none;
+}
+
+.widget-switch .widget-switch-btn-wrapper {
+  background-color: $global-brand-gray-light;
+  border: 1px solid $global-brand-gray-primary;
+  box-shadow: none;
+  margin: 0;
+  transition: 0.1s ease;
+}
+
+.widget-switch .widget-switch-btn-wrapper.un-checked {
+  border-color: $global-brand-gray-primary;
+  box-shadow: none;
+}
+
+.widget-switch .widget-switch-btn-wrapper .widget-switch-btn {
+  background: $global-brand-white;
+  box-shadow: 0 1px 3px rgba($global-brand-black, 0.4);
+}
+
+.widget-switch .widget-switch-btn-wrapper .widget-switch-btn.left {
+  left: 0;
+  transition: 0.2s ease;
+
+  &:active {
+    border-radius: 50%;
+    width: 30px;
+  }
+}
+
+.widget-switch .widget-switch-btn-wrapper .widget-switch-btn.right {
+  left: 20px;
+  transition: 0.2s ease;
+
+  &:active {
+    border-radius: 50%;
+    left: 20px;
+    transition: left 0s;
+    width: 30px;
+  }
+}
+
+.widget-switch .widget-switch-btn-wrapper.disabled {
+  opacity: 0.5;
+
+  &.un-checked {
+    opacity: 1;
+
+    .widget-switch-btn {
+      background-color: $global-brand-gray-primary;
+    }
+  }
+}
+
+.android .widget-switch .widget-switch-btn-wrapper {
+  background: $global-brand-gray-dark;
+  box-shadow: none;
+
+  .widget-switch-btn {
+    background: $global-brand-white;
+    box-shadow: 0 1px 3px rgba($global-brand-black, 0.4);
+    transition: all 0.2s ease;
+  }
+}
+
+.android .widget-switch .widget-switch-btn-wrapper {
+  .widget-switch-btn.left:active,
+  .widget-switch-btn.right:active {
+    width: 26px;
+  }
+}
+
+.android .widget-switch .widget-switch-btn-wrapper.disabled {
+  background: $global-brand-gray;
+  pointer-events: none;
+
+  .widget-switch-btn {
+    background: $global-brand-gray-light;
+  }
+}
+
+div {
+  &.widget-switch-brand-primary,
+  &.widget-switch-brand-secondary,
+  &.widget-switch-brand-success,
+  &.widget-switch-brand-warning,
+  &.widget-switch-brand-danger {
+    &.android {
+      .widget-switch {
+        .widget-switch-btn-wrapper {
+          &.checked {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-switch-brand-primary {
+    &.android {
+      .widget-switch {
+        .widget-switch-btn-wrapper {
+          &.checked {
+            background-color: $global-brand-gray-tint;
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-switch-brand-secondary {
+    &.android {
+      .widget-switch {
+        .widget-switch-btn-wrapper {
+          &.checked {
+            background-color: $color-default-light;
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-switch-brand-success {
+    &.android {
+      .widget-switch {
+        .widget-switch-btn-wrapper {
+          &.checked {
+            background-color: $color-success-lighter;
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-switch-brand-warning {
+    &.android {
+      .widget-switch {
+        .widget-switch-btn-wrapper {
+          &.checked {
+            background-color: $color-warning-lighter;
+          }
+        }
+      }
+    }
+  }
+
+  &.widget-switch-brand-danger {
+    &.android {
+      .widget-switch {
+        .widget-switch-btn-wrapper {
+          &.checked {
+            background-color: $color-danger-lighter;
+          }
+        }
+      }
+    }
+  }
+}

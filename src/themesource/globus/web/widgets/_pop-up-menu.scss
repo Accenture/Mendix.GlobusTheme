@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// Pop-up menu - widgets
+// -----------------------------------------------------------------------------
+
+.popupmenu-menu {
+  background-color: $global-brand-white;
+  border-radius: $border-radius-default;
+  box-shadow: 0 2px 8px 0 rgba($global-brand-black, 0.08);
+
+  .popupmenu-basic-item:first-child,
+  .popupmenu-custom-item:first-child {
+    border-top-left-radius: $border-radius-default;
+    border-top-right-radius: $border-radius-default;
+  }
+
+  .popupmenu-basic-item:last-child,
+  .popupmenu-custom-item:last-child {
+    border-bottom-left-radius: $border-radius-default;
+    border-bottom-right-radius: $border-radius-default;
+  }
+}
+
+.popupmenu-basic-divider {
+  background-color: $global-brand-gray;
+}
+
+.popupmenu-basic-item {
+  color: $global-brand-primary;
+  line-height: 1.78571429;
+  padding: $spacing-smaller $spacing-small;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $global-brand-gray-tint;
+  }
+}
+
+.popupmenu-custom-item {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $global-brand-gray-tint;
+  }
+}

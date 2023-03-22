@@ -2,6 +2,23 @@
 // Tabcontainer - helpers
 // -----------------------------------------------------------------------------
 
+.tab-pills.mx-tabcontainer {
+  & > .mx-tabcontainer-tabs {
+    & > li {
+      margin-bottom: 0;
+    }
+
+    & > li > a {
+      margin-right: $spacing-smaller;
+
+      &:hover,
+      &:focus {
+        color: $global-brand-text-secondary;
+      }
+    }
+  }
+}
+
 .tab-lined.mx-tabcontainer {
   & > .mx-tabcontainer-tabs {
     border-width: 1px;
@@ -17,7 +34,7 @@
 
         &:hover,
         &:focus {
-          color: $global-brand-primary;
+          color: $global-brand-text-secondary;
           border-bottom: 1px solid $global-brand-primary;
         }
       }

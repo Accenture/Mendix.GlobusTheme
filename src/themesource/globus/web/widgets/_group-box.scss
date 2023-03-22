@@ -6,19 +6,30 @@
   > .mx-groupbox-header {
     align-items: center;
     display: flex;
+    font-size: $font-size-h5;
     font-weight: $font-weight-semibold;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: flex-end;
+    line-height: 1.3;
     min-height: 38px;
-    padding: ($spacing-small / 2) $spacing-small;
+    padding: $spacing-small;
 
     .mx-groupbox-collapse-icon {
       font-size: $font-size-small;
-      margin: 0;
+      margin: 0 0 0 auto;
     }
   }
 
+  > h1.mx-groupbox-header,
+  > h2.mx-groupbox-header,
+  > h3.mx-groupbox-header,
+  > h4.mx-groupbox-header,
+  > h5.mx-groupbox-header,
+  > h6.mx-groupbox-header {
+    font-size: $font-size-h5;
+  }
+
   > .mx-groupbox-body {
-    padding: ($spacing-small / 2) $spacing-small;
+    padding: $spacing-small;
   }
 }

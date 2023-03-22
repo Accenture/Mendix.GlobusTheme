@@ -1,0 +1,29 @@
+// -----------------------------------------------------------------------------
+// Tree node - widgets
+// -----------------------------------------------------------------------------
+
+.widget-tree-node {
+  margin: 0;
+
+  .widget-tree-node-branch-header {
+    svg {
+      fill: $global-brand-primary;
+      height: 14px;
+      width: 14px;
+    }
+
+    .widget-tree-node-loading-spinner {
+      height: 14px;
+      width: 14px;
+    }
+  }
+
+  .widget-tree-node-branch-header-value {
+    font-size: $font-size-default;
+    margin: 0;
+  }
+
+  .widget-tree-node-branch-header-icon {
+    margin-right: $spacing-smaller;
+  }
+}

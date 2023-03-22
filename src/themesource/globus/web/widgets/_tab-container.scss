@@ -10,8 +10,9 @@
 
       &:hover,
       &:focus {
+        background-color: $global-brand-gray-tint;
         border-color: transparent;
-        color: $global-brand-primary;
+        color: $global-brand-text-secondary;
       }
     }
   }

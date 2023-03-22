@@ -15,6 +15,12 @@ input[type="checkbox"] {
     opacity: 1;
   }
 
+  &::after {
+    border: 1px solid $global-brand-white;
+    border-top: 0;
+    border-right: 0;
+  }
+
   &:focus {
     outline: none;
   }

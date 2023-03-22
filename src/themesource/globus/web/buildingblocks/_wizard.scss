@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------------------
+// Wizard
+// -----------------------------------------------------------------------------
+
+.wizard {
+  margin-bottom: $spacing-medium;
+
+  .wizard-step-number {
+    height: $wizard-step-number-size;
+    width: $wizard-step-number-size;
+  }
+}
+
+.wizard-circle {
+  .wizard-step {
+    &::before {
+      height: 1px;
+    }
+  }
+
+  .wizard-step-visited {
+    .wizard-step-number {
+      background-image: url("../../../img/Globus$Images$Tick.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      font-size: 0;
+      padding: 0;
+    }
+  }
+}
+
+.wizard-arrow {
+  .wizard-step {
+    .wizard-step-text {
+      color: $wizard-default-color;
+    }
+  }
+
+  .wizard-step-visited {
+    .wizard-step-text {
+      color: $wizard-visited-color;
+    }
+  }
+
+  .wizard-step-active {
+    .wizard-step-text {
+      color: $wizard-active-color;
+    }
+  }
+}

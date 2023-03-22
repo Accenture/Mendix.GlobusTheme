@@ -2,6 +2,14 @@
 // Radio Button - widgets
 // -----------------------------------------------------------------------------
 
+.radio {
+  margin-bottom: $spacing-smaller * 1.5;
+
+  & + & {
+    margin-top: 0;
+  }
+}
+
 .mx-radiobuttons {
   .radio {
     input[type="radio"] {
@@ -17,7 +25,7 @@
   &.inline {
     .mx-radiogroup {
       .radio {
-        margin: 0 $spacing-medium 0 0;
+        margin: 0 $spacing-small 0 0;
       }
     }
   }
@@ -29,12 +37,8 @@ input[type="radio"] {
   }
 
   &::after {
-    height: 40%;
-    width: 40%;
-  }
-
-  &:checked::before {
-    border-color: $form-input-border-color;
+    height: 50%;
+    width: 50%;
   }
 
   &:checked:disabled:before {

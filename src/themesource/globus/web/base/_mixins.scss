@@ -31,3 +31,142 @@
     }
   }
 }
+
+// Accordions
+@mixin get-accordion-group-styles(
+  $background-color,
+  $background-color-hover,
+  $color,
+  $color-hover,
+  $border-color
+) {
+  border-color: $border-color;
+  background-color: $bg-color-secondary;
+
+  &:first-child {
+    border-top-left-radius: $border-radius-default;
+    border-top-right-radius: $border-radius-default;
+
+    > .widget-accordion-group-header > .widget-accordion-group-header-button {
+      border-top-left-radius: calc(#{$border-radius-default} - 1px);
+      border-top-right-radius: calc(#{$border-radius-default} - 1px);
+    }
+  }
+
+  &:last-child {
+    border-bottom-left-radius: $border-radius-default;
+    border-bottom-right-radius: $border-radius-default;
+  }
+
+  &.widget-accordion-group-collapsed:last-child,
+  &.widget-accordion-group-collapsing:last-child {
+    > .widget-accordion-group-header > .widget-accordion-group-header-button {
+      border-bottom-left-radius: calc(#{$border-radius-default} - 1px);
+      border-bottom-right-radius: calc(#{$border-radius-default} - 1px);
+    }
+  }
+
+  &.widget-accordion-group-collapsing:last-child {
+    > .widget-accordion-group-header > .widget-accordion-group-header-button {
+      transition: border-radius 5ms ease 200ms;
+    }
+  }
+
+  &.widget-accordion-group-expanding:last-child {
+    > .widget-accordion-group-header > .widget-accordion-group-header-button {
+      transition: border-radius 5ms ease 80ms;
+    }
+  }
+
+  > .widget-accordion-group-header > .widget-accordion-group-header-button {
+    cursor: auto;
+    background-color: $background-color;
+    padding: $spacing-small;
+
+    > :is(h1, h2, h3, h4, h5, .widget-timeline-title, .widget-eventTime, h6) {
+      font-size: $font-size-h5;
+      font-weight: $font-weight-semibold;
+    }
+
+    > :is(
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .widget-timeline-title,
+        .widget-eventTime,
+        h6,
+        p,
+        span
+      ) {
+      color: $color;
+    }
+
+    .widget-accordion-group-header-button-icon {
+      fill: $color;
+      height: 14px;
+      width: 14px;
+    }
+
+    &.widget-accordion-group-header-button-clickable {
+      cursor: pointer;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $background-color-hover;
+
+        > :is(
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            .widget-timeline-title,
+            .widget-eventTime,
+            h6,
+            p,
+            span
+          ) {
+          color: $color-hover;
+        }
+
+        .widget-accordion-group-header-button-icon {
+          fill: $color-hover;
+        }
+      }
+    }
+  }
+
+  > .widget-accordion-group-content-wrapper > .widget-accordion-group-content {
+    border-color: $border-color;
+    padding: $spacing-small;
+  }
+}
+
+@mixin get-accordion-preview-group-styles($color) {
+  .widget-accordion-group-header-button {
+    > div
+      > :is(h1, h2, h3, h4, h5, .widget-timeline-title, .widget-eventTime, h6) {
+      font-size: $font-size-h5;
+      font-weight: $font-weight-semibold;
+    }
+
+    > div
+      > :is(
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .widget-timeline-title,
+        .widget-eventTime,
+        h6,
+        p,
+        span
+      ) {
+      color: $color;
+    }
+  }
+}

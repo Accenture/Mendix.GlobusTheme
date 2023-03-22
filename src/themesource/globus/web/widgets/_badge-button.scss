@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// Badge Buttons - widgets
+// -----------------------------------------------------------------------------
+
+.widget-badge-button {
+  .widget-badge-button-text {
+    padding-right: $spacing-smaller;
+  }
+
+  .badge {
+    border-radius: 10px;
+    font-weight: $font-weight-normal;
+    padding: 3px 8px 4px;
+  }
+}

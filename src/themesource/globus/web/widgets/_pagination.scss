@@ -6,24 +6,25 @@
   .pagination {
     display: flex;
     flex-wrap: wrap;
-    margin: $spacing-medium 0;
+    margin: $spacing-medium 0 0;
     border-radius: 0;
 
     .btn,
     .mx-button {
       display: flex;
       align-items: center;
+      background-color: $btn-default-bg;
       border-radius: $border-radius-default;
-      border: 1px solid $global-brand-gray;
+      border: 1px solid $btn-default-border-color;
       font-size: $font-size-small;
-      color: $global-brand-link;
+      color: $btn-default-color;
       outline: none;
       margin: 0;
 
       &:hover,
       &:focus:not(.active) {
-        border-color: $global-brand-gray;
-        background-color: $global-brand-gray;
+        border-color: $btn-default-bg-hover;
+        background-color: $btn-default-bg-hover;
         outline: none;
       }
 
@@ -65,10 +66,11 @@
     ul li {
       width: $pagination-btn-size;
       height: $pagination-btn-size;
-      border: 1px solid $global-brand-gray-primary;
-      background-color: $global-brand-white;
+      border: 1px solid $btn-default-border-color;
+      background-color: $btn-default-bg;
+      border-radius: 0;
       font-size: $font-size-small;
-      color: $global-brand-link;
+      color: $btn-default-color;
       line-height: $line-height-base;
       justify-content: center;
       margin: 0;
@@ -91,8 +93,8 @@
 
       &:hover:not(.break-view),
       &:focus:not(.active):not(.break-view) {
-        border-color: $global-brand-gray;
-        background-color: $global-brand-gray;
+        border-color: $btn-default-bg-hover;
+        background-color: $btn-default-bg-hover;
         box-shadow: none;
         outline: none;
       }
@@ -101,6 +103,7 @@
       &.active:not(.break-view):hover,
       &.active:not(.break-view):focus {
         background-color: $global-brand-link;
+        border-color: $global-brand-link;
         box-shadow: none;
         outline: none;
         cursor: not-allowed;

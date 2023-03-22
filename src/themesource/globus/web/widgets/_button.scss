@@ -4,12 +4,45 @@
 
 .btn,
 .mx-button {
-  padding: ($spacing-small / 2) $spacing-small;
+  height: $btn-medium-height;
+  padding: ($spacing-smaller / 2) $spacing-small;
+
+  &.disabled,
+  &[disabled],
+  &[aria-disabled] {
+    background-color: $global-brand-gray-primary;
+    border-color: $global-brand-gray-primary;
+    color: $global-brand-gray-light;
+
+    .badge {
+      background-color: $global-brand-gray-light;
+      color: $global-brand-gray-primary;
+    }
+  }
 }
 
-.btn.disabled,
-.btn[disabled],
-fieldset[disabled] .btn {
-  pointer-events: visible;
-  opacity: 0.8;
+.btn,
+.mx-button,
+.mx-link {
+  img {
+    height: 14px;
+    margin-right: 0;
+  }
+}
+
+.mx-link {
+  &.btn-sm,
+  &.btn-lg {
+    line-height: $line-height-base;
+    padding: 0;
+  }
+}
+
+.link-back {
+  color: $global-brand-primary;
+
+  &:hover,
+  &:focus {
+    color: $global-brand-primary;
+  }
 }

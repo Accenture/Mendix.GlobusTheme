@@ -4,12 +4,20 @@
 
 .groupbox-transparent {
   > .mx-groupbox-header {
-    padding: ($spacing-small / 2) $spacing-small;
+    color: $global-brand-primary;
     font-size: $font-size-default;
     font-weight: $font-weight-semibold;
+    padding: $spacing-small;
   }
 
   .mx-groupbox-body {
-    padding: ($spacing-small / 2) $spacing-small;
+    border-bottom-color: transparent;
+    padding: $spacing-small;
+  }
+}
+
+.groupbox-callout {
+  .mx-groupbox-header + .mx-groupbox-body {
+    padding-top: $spacing-small;
   }
 }

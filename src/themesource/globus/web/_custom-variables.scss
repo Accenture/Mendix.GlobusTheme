@@ -17,9 +17,9 @@ $global-brand-page-bg: #f6fafc;
 
 $global-brand-text-default: #4a4a4a;
 $global-brand-text-primary: #244a63;
-$global-brand-text-secondary: #5c798c;
+$global-brand-text-secondary: #557081;
 
-$global-brand-gray: #e5e5e5;
+$global-brand-gray: #e6e6e6;
 $global-brand-gray-dark: #687386;
 $global-brand-gray-light: #f5f5f5;
 $global-brand-gray-tint: #edf2f5;
@@ -183,7 +183,7 @@ $form-label-weight: $font-weight-semibold;
 $form-label-gutter: 8px;
 
 // Form Input dimensions
-$form-input-height: auto;
+$form-input-height: 37px;
 $form-input-padding-y: 8px;
 $form-input-padding-x: 10px;
 $form-input-static-padding-y: 8px;
@@ -200,7 +200,7 @@ $form-input-bg-disabled: $global-brand-gray-light;
 $form-input-color: $global-brand-text-default;
 $form-input-focus-color: $global-brand-text-default;
 $form-input-disabled-color: $global-brand-gray-primary;
-$form-input-placeholder-color: rgba($global-brand-text-default, 0.5);
+$form-input-placeholder-color: $global-brand-gray-primary;
 $form-input-border-color: $global-brand-gray-primary;
 $form-input-border-focus-color: $global-brand-primary;
 $form-input-glyphicon-size: 14px;
@@ -209,13 +209,17 @@ $form-input-glyphicon-size: 14px;
 $form-input-static-border-color: $border-color-default;
 
 // Form Group
-$form-group-margin-bottom: 24px;
+$form-group-margin-bottom: 16px;
 $form-group-gutter: 12px;
 
 // Buttons
 $btn-font-size: 14px;
 $btn-bordered: false;
 $btn-border-radius: $border-radius-default;
+
+$btn-small-height: 27px;
+$btn-medium-height: 37px;
+$btn-large-height: 52px;
 
 $btn-default-bg: $global-brand-white;
 $btn-primary-bg: $brand-primary;
@@ -237,12 +241,20 @@ $btn-danger-color: $global-brand-white;
 
 $btn-default-icon-color: $global-brand-gray-dark;
 
-$btn-default-bg-hover: $global-brand-gray;
+$btn-default-bg-hover: $global-brand-gray-primary;
 $btn-primary-bg-hover: mix($btn-primary-bg, $global-brand-black, 80%);
 $btn-success-bg-hover: mix($btn-success-bg, $global-brand-black, 80%);
 $btn-warning-bg-hover: mix($btn-warning-bg, $global-brand-black, 80%);
 $btn-danger-bg-hover: mix($btn-danger-bg, $global-brand-black, 80%);
 $btn-link-bg-hover: $global-brand-gray;
+
+// Header blocks
+
+$header-min-height: 240px;
+$header-bg-color: $global-brand-info;
+$header-bgimage-filter: brightness(60%);
+$header-text-color: $global-brand-white;
+$header-text-color-detail: $global-brand-text-secondary;
 
 // Color variations
 $color-default-darker: mix(
@@ -323,19 +335,19 @@ $grid-paging-color: rgba($global-brand-text-secondary, 0.5);
 $grid-paging-color-hover: $global-brand-text-secondary;
 
 // Tabs
-$tabs-color: $global-brand-text-default;
+$tabs-color: $global-brand-text-secondary;
 $tabs-color-active: $global-brand-primary;
-$tabs-lined-color-active: $global-brand-link;
+$tabs-lined-color-active: $global-brand-primary;
 
 $tabs-lined-border-width: 3px;
 
-$tabs-border-color: $global-brand-gray-tint;
-$tabs-lined-border-color: $global-brand-link;
+$tabs-border-color: $global-brand-gray-light;
+$tabs-lined-border-color: $global-brand-primary;
 
 $tabs-bg: $global-brand-white;
-$tabs-bg-pills: $global-brand-gray-primary;
-$tabs-bg-hover: transparent;
-$tabs-bg-active: transparent;
+$tabs-bg-pills: $global-brand-gray-light;
+$tabs-bg-hover: $global-brand-gray-tint;
+$tabs-bg-active: $global-brand-primary;
 
 // Modals
 $modal-header-bg: transparent;
@@ -350,6 +362,7 @@ $dataview-emptymessage-bg: $bg-color;
 $dataview-emptymessage-color: $font-color-default;
 
 // Alerts
+$alert-primary-bg: mix($global-brand-info, $global-brand-white, 10%);
 $alert-success-bg: $color-success-lighter;
 $alert-warning-bg: $color-warning-lighter;
 $alert-danger-bg: $color-danger-lighter;
@@ -363,33 +376,33 @@ $alert-warning-border-color: $global-brand-warning;
 $alert-danger-border-color: $global-brand-danger;
 
 // Wizard
-$wizard-step-height: 44px;
-$wizard-step-number-size: 64px;
+$wizard-step-height: 46px;
+$wizard-step-number-size: 60px;
 $wizard-step-number-font-size: 20px;
 
 $wizard-default-bg: $global-brand-white;
 $wizard-default-color: $font-color-default;
-$wizard-default-step-color: $font-color-default;
+$wizard-default-step-color: $global-brand-text-primary;
 $wizard-default-border-color: $border-color-default;
 
 $wizard-active-bg: $global-brand-primary;
 $wizard-active-color: $global-brand-white;
-$wizard-active-step-color: $color-primary-dark;
+$wizard-active-step-color: $global-brand-text-primary;
 $wizard-active-border-color: $global-brand-primary;
 
 $wizard-visited-bg: $global-brand-success;
-$wizard-visited-color: $global-brand-white;
-$wizard-visited-step-color: $global-brand-link;
+$wizard-visited-color: $global-brand-link;
+$wizard-visited-step-color: $global-brand-text-primary;
 $wizard-visited-border-color: $global-brand-success;
 
 // Labels
-$label-default-bg: $brand-default;
+$label-default-bg: $global-brand-gray;
 $label-primary-bg: $brand-primary;
 $label-success-bg: $brand-success;
 $label-warning-bg: $brand-warning;
 $label-danger-bg: $brand-danger;
 
-$label-default-border-color: $brand-default;
+$label-default-border-color: $global-brand-gray;
 $label-primary-border-color: $brand-primary;
 $label-success-border-color: $brand-success;
 $label-warning-border-color: $brand-warning;
@@ -409,7 +422,7 @@ $groupbox-warning-bg: $brand-warning;
 $groupbox-danger-bg: $brand-danger;
 $groupbox-white-bg: $global-brand-white;
 
-$groupbox-default-color: $font-color-default;
+$groupbox-default-color: $global-brand-primary;
 $groupbox-primary-color: $global-brand-white;
 $groupbox-success-color: $global-brand-white;
 $groupbox-warning-color: $global-brand-white;
@@ -421,11 +434,58 @@ $callout-default-color: $font-color-default;
 $callout-success-color: $brand-success;
 $callout-warning-color: $brand-warning;
 $callout-danger-color: $brand-danger;
+$callout-primary-color: $brand-primary;
 
 $callout-default-bg: $color-default-lighter;
 $callout-success-bg: $color-success-lighter;
 $callout-warning-bg: $color-warning-lighter;
 $callout-danger-bg: $color-danger-lighter;
+$callout-primary-bg: mix($global-brand-info, $global-brand-white, 10%);
+
+// Accordions
+$accordion-header-default-bg: $bg-color-secondary;
+$accordion-header-default-bg-hover: $bg-color;
+$accordion-header-default-color: $font-color-header;
+$accordion-default-border-color: $global-brand-gray-primary;
+
+$accordion-bg-striped: $grid-bg-striped;
+$accordion-bg-striped-hover: $grid-bg-selected;
+
+$accordion-header-primary-bg: $btn-primary-bg;
+$accordion-header-secondary-bg: $btn-default-bg;
+$accordion-header-success-bg: $btn-success-bg;
+$accordion-header-warning-bg: $btn-warning-bg;
+$accordion-header-danger-bg: $btn-danger-bg;
+
+$accordion-header-primary-bg-hover: $btn-primary-bg-hover;
+$accordion-header-secondary-bg-hover: $btn-default-bg-hover;
+$accordion-header-success-bg-hover: $btn-success-bg-hover;
+$accordion-header-warning-bg-hover: $btn-warning-bg-hover;
+$accordion-header-danger-bg-hover: $btn-danger-bg-hover;
+
+$accordion-header-primary-color: $btn-primary-color;
+$accordion-header-secondary-color: $btn-default-color;
+$accordion-header-success-color: $btn-success-color;
+$accordion-header-warning-color: $btn-warning-color;
+$accordion-header-danger-color: $btn-danger-color;
+
+$accordion-primary-border-color: $btn-primary-border-color;
+$accordion-secondary-border-color: $btn-default-border-color;
+$accordion-success-border-color: $btn-success-border-color;
+$accordion-warning-border-color: $btn-warning-border-color;
+$accordion-danger-border-color: $btn-danger-border-color;
+
+// Timeline
+$timeline-icon-color: $global-brand-primary;
+$timeline-border-color: $global-brand-gray-primary;
+$timeline-event-time-color: $brand-primary;
+
+$timeline-icon-size: 12px;
+$timeline-image-size: 27px;
+
+$timeline-grouping-size: 136px;
+$timeline-grouping-border-radius: 20px;
+$timeline-grouping-border-color: $timeline-border-color;
 
 // Spacing
 // Smallest spacing
@@ -439,8 +499,8 @@ $spacing-small: 16px;
 
 // Medium spacing
 $spacing-medium: 24px;
-$t-spacing-medium: 16px;
-$m-spacing-medium: 16px;
+$t-spacing-medium: 24px;
+$m-spacing-medium: 24px;
 
 // Large spacing
 $spacing-large: 32px;
@@ -481,16 +541,13 @@ $t-layout-spacing: $t-layout-spacing-top $t-layout-spacing-right
 $gutter-size: 12px;
 
 // Pagination
-$pagination-btn-size: 38px;
+$pagination-btn-size: 37px;
 
 // Tables
 $padding-table-cell-top: 16px;
 $padding-table-cell-bottom: 16px;
 $padding-table-cell-left: 16px;
 $padding-table-cell-right: 16px;
-
-// Tooltips
-$tooltip-arrow-size: 4px;
 
 // Media queries breakpoints
 $screen-xs: 480px;
@@ -573,48 +630,3 @@ $callout-info-bg: $color-info-lighter;
 // -----------------------------------------------------------------------------
 
 // $brand-gradient: linear-gradient(to right top, #264ae5, #2239c5, #1b29a6, #111988, #03096c);
-
-// Timeline
-// $timeline-icon-color: $brand-primary;
-// $timeline-border-color: $border-color-default;
-// $timeline-event-time-color: $brand-primary;
-
-// $timeline-icon-size: 18px;
-// $timeline-image-size: 36px;
-
-// $timeline-grouping-size: 120px;
-// $timeline-grouping-border-radius: 30px;
-// $timeline-grouping-border-color: $timeline-border-color;
-
-// Accordions
-// $accordion-header-default-bg: $bg-color-secondary;
-// $accordion-header-default-bg-hover: $bg-color;
-// $accordion-header-default-color: $font-color-header;
-// $accordion-default-border-color: $border-color-default;
-
-// $accordion-bg-striped: $grid-bg-striped;
-// $accordion-bg-striped-hover: $grid-bg-selected;
-
-// $accordion-header-primary-bg: $btn-primary-bg;
-// $accordion-header-secondary-bg: $btn-default-bg;
-// $accordion-header-success-bg: $btn-success-bg;
-// $accordion-header-warning-bg: $btn-warning-bg;
-// $accordion-header-danger-bg: $btn-danger-bg;
-
-// $accordion-header-primary-bg-hover: $btn-primary-bg-hover;
-// $accordion-header-secondary-bg-hover: $btn-default-bg-hover;
-// $accordion-header-success-bg-hover: $btn-success-bg-hover;
-// $accordion-header-warning-bg-hover: $btn-warning-bg-hover;
-// $accordion-header-danger-bg-hover: $btn-danger-bg-hover;
-
-// $accordion-header-primary-color: $btn-primary-color;
-// $accordion-header-secondary-color: $btn-default-color;
-// $accordion-header-success-color: $btn-success-color;
-// $accordion-header-warning-color: $btn-warning-color;
-// $accordion-header-danger-color: $btn-danger-color;
-
-// $accordion-primary-border-color: $btn-primary-border-color;
-// $accordion-secondary-border-color: $btn-default-border-color;
-// $accordion-success-border-color: $btn-success-border-color;
-// $accordion-warning-border-color: $btn-warning-border-color;
-// $accordion-danger-border-color: $btn-danger-border-color;

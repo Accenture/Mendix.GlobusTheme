@@ -1,10 +1,7 @@
 // -----------------------------------------------------------------------------
-// Labels - widgets
+// Typography - widgets
 // -----------------------------------------------------------------------------
 
-.label {
-  border-radius: $border-radius-default;
-  font-size: $font-size-small;
-  font-weight: $font-weight-bold;
-  padding: 3px 8px 4px;
+p {
+  line-height: $line-height-base;
 }

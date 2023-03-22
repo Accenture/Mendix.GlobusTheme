@@ -1,0 +1,23 @@
+// -----------------------------------------------------------------------------
+// Accordion - widgets
+// -----------------------------------------------------------------------------
+
+.widget-accordion {
+  .widget-accordion-group {
+    @include get-accordion-group-styles(
+      $accordion-header-default-bg,
+      $accordion-header-default-bg-hover,
+      $accordion-header-default-color,
+      $brand-primary,
+      $accordion-default-border-color
+    );
+  }
+
+  &.widget-accordion-preview {
+    .widget-accordion-group {
+      @include get-accordion-preview-group-styles(
+        $accordion-header-default-color
+      );
+    }
+  }
+}

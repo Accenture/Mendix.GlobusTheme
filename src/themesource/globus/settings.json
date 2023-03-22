@@ -1,3 +1,7 @@
 {
-    
+  "excludes": {
+      "Atlas_Core": {
+          "layouts": true
+      }
+  }
 }

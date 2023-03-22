@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// Progress Circle - widgets
+// -----------------------------------------------------------------------------
+
+.widget-progress-circle-trail-path {
+  stroke: $global-brand-gray-light;
+}
+
+.progress-circle-label-container {
+  .progressbar-text {
+      text-align: center;
+  }
+}

@@ -1,0 +1,45 @@
+// -----------------------------------------------------------------------------
+// Timeline - widgets
+// -----------------------------------------------------------------------------
+
+.widget-timeline-date-header {
+  line-height: 18px;
+  padding: $spacing-smaller;
+}
+
+.widget-timeline-event {
+  margin-bottom: $spacing-large;
+  padding: 0 $spacing-medium $spacing-large;
+}
+
+.widget-timeline-title,
+.widget-eventTime {
+  font-size: $font-size-default;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-base;
+  margin: 0 0 $spacing-smaller;
+}
+
+.widget-timeline-description {
+  color: $global-brand-text-secondary;
+  line-height: $line-height-base;
+  margin: 0;
+}
+
+.timeline-with-image {
+  .widget-timeline-content-wrapper {
+    .widget-timeline-date-time-wrapper {
+      order: 2;
+      margin-right: 0;
+    }
+
+    .widget-timeline-info-wrapper {
+      order: 1;
+    }
+  }
+
+  .timeline-entry-image {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+}
