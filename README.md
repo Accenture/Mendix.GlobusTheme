@@ -23,24 +23,36 @@ The basic version of Globus Theme contains the most commonly used components of 
 
 Widgets:
 
-- Alerts
-- Badges and labels
-- Buttons
+- Accordions
+- Badges
+- Badge buttons
 - Checkboxes
 - Data grid
+- Data grid 2
+- Date pickers
+- Dropdowns
+- File manager
 - Groupboxes
+- Labels
 - List view as Grid (including Responsive Web Design solution)
 - Multiselect
+- Pop-up menus
+- Progress bars
+- Progress circles
 - Radio buttons
 - Switches
 - Tabs
 - Tables (including Responsive Web Design solution)
-- Text fields
+- Textareas
+- Text input
+- Timelines
 - Tooltips
+- Tree node
 - Typography
 
 Building blocks:
 
+- Alerts
 - Breadcrumbs
 - Cards
 - Forms
@@ -55,7 +67,7 @@ Others:
 - Did not test on the Internet Explorer
 
 ## Dependencies
-- Mendix Studio PRO, created and tested on version 9.6.6
+- Mendix Studio PRO, created and tested on version 9.6.14
 - To customise the Globus Theme, SASS/CSS knowledge is necessary
 
 ## Installation
@@ -74,4 +86,4 @@ After we have already installed the module, you need to import variables from Gl
 The are no known bugs at the moment.
 
 ## Demo
-https://globus-sandbox.mxapps.io/
+https://globusshowcase-sandbox.mxapps.io/
