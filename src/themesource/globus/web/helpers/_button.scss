@@ -3,13 +3,19 @@
 // -----------------------------------------------------------------------------
 
 .btn-sm {
-  height: $btn-small-height;
   padding: ($spacing-smaller / 2) ($spacing-smaller * 1.5);
+
+  &:not(.toggle-btn) {
+    height: $btn-small-height;
+  }
 }
 
 .btn-lg {
-  height: $btn-large-height;
   padding: $spacing-smaller $spacing-large;
+
+  &:not(.toggle-btn) {
+    height: $btn-large-height;
+  }
 }
 
 .btn-sm,

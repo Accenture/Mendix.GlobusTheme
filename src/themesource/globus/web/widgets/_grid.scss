@@ -172,17 +172,22 @@
     padding-right: 0;
 
     .column-selector-content {
+      align-self: flex-end;
+
       .column-selector-button {
         align-items: center;
         display: flex;
+        height: $btn-medium-height;
         justify-content: center;
         margin: 0;
-        padding: $spacing-smaller ($spacing-smaller * 1.5);
+        padding: ($spacing-small / 2) ($spacing-smallest * 3);
+        width: auto;
 
         svg {
           background-repeat: no-repeat;
           background-size: 15px;
           background-image: url("/img/Globus$Images$Eye.svg");
+          margin: 0;
           height: 15px;
           width: 15px;
 
@@ -203,17 +208,17 @@
     margin-left: $spacing-smaller;
     padding: $spacing-smaller ($spacing-smaller * 1.5);
 
-    .glyphicon-calendar {
+    .button-icon {
+      background-repeat: no-repeat;
+      background-size: 15px;
+      background-image: url("/img/Globus$Images$Calendar.svg");
+      font-size: 0;
       display: block;
+      height: 15px;
+      width: 15px;
 
-      &::before {
-        background-repeat: no-repeat;
-        background-size: 15px;
-        background-image: url("/img/Globus$Images$Calendar.svg");
-        font-size: 0;
-        display: block;
-        height: 15px;
-        width: 15px;
+      path {
+        display: none;
       }
     }
   }
@@ -238,38 +243,33 @@
     margin-bottom: $spacing-smaller;
     padding: $spacing-smaller / 2;
 
-    .glyphicon {
-      &::before {
-        content: "";
-        display: block;
-        height: 12px;
-        width: 12px;
-        background-size: 12px;
-        background-repeat: no-repeat;
+    .pagination-icon {
+      display: block;
+      height: 12px;
+      width: 12px;
+      background-size: 12px;
+      background-repeat: no-repeat;
+      position: relative;
+      top: 1px;
+
+      &.step-backward {
+        background-image: url("/img/Globus$Images$Arrow_lastleft.svg");
       }
 
-      &.glyphicon-step-backward {
-        &::before {
-          background-image: url("/img/Globus$Images$Arrow_lastleft.svg");
-        }
+      &.backward {
+        background-image: url("/img/Globus$Images$Arrow_doubleleft.svg");
       }
 
-      &.glyphicon-backward {
-        &::before {
-          background-image: url("/img/Globus$Images$Arrow_doubleleft.svg");
-        }
+      &.forward {
+        background-image: url("/img/Globus$Images$Arrow_doubleright.svg");
       }
 
-      &.glyphicon-forward {
-        &::before {
-          background-image: url("/img/Globus$Images$Arrow_doubleright.svg");
-        }
+      &.step-forward {
+        background-image: url("/img/Globus$Images$Arrow_lastright.svg");
       }
 
-      &.glyphicon-step-forward {
-        &::before {
-          background-image: url("/img/Globus$Images$Arrow_lastright.svg");
-        }
+      path {
+        display: none;
       }
     }
   }

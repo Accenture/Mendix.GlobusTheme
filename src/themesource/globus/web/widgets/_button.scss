@@ -4,8 +4,11 @@
 
 .btn,
 .mx-button {
-  height: $btn-medium-height;
   padding: ($spacing-smaller / 2) $spacing-small;
+
+  &:not(.toggle-btn) {
+    height: $btn-medium-height;
+  }
 
   &.disabled,
   &[disabled],
@@ -39,7 +42,10 @@
 }
 
 .link-back {
+  align-items: center;
   color: $global-brand-primary;
+  display: inline-flex;
+  gap: $spacing-smaller;
 
   &:hover,
   &:focus {
